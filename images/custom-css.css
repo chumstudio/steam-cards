@@ -1,0 +1,63 @@
+﻿.ludy-wrapper {
+ display: none;
+}
+
+.ludy-options a, .ludy-trigger {
+    white-space: inherit;
+    height: auto;
+    display: block;
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: 1px solid #0642A9;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff !important;
+    box-shadow: inset 0px 1px 0px #25B4FF, 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: inset 0px 1px 0px #25B4FF, 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: inset 0px 1px 0px #25B4FF, 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+    -ms-box-shadow: inset 0px 1px 0px #25B4FF, 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+    -o-box-shadow: inset 0px 1px 0px #25B4FF, 0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+    background: #2399FF;
+    background: -moz-linear-gradient(top, #2399FF 0%, #0A5FE2 100%);
+    background: -webkit-linear-gradient(top, #2399FF 0%,#0A5FE2 100%);
+    background: linear-gradient(to bottom, #2399FF 0%,#0A5FE2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2399FF', endColorstr='#0A5FE2',GradientType=0 );
+    line-height: normal;
+}
+
+.ludy-options a:hover, .ludy-trigger:hover {
+ text-decoration: none;
+   color: #fff !important;
+   background: #0A5FE2;
+   background: -moz-linear-gradient(top,  #0A5FE2 0%, #2399FF 100%);
+   background: -webkit-linear-gradient(top,  #0A5FE2 0%,#2399FF 100%);
+   background: linear-gradient(to bottom,  #0A5FE2 0%,#2399FF 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A5FE2', endColorstr='#2399FF',GradientType=0 );
+}
+
+.ludy-options a {
+ margin-bottom: 6px !important;
+ font-size: 11px !important;
+ height: auto !important;
+ line-height: normal !important;
+    font-weight: 500;
+}
+
+.ludy-trigger {
+ cursor: pointer;
+ margin: 0 auto;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+body {
+    background-image: url('cog.png');
+    background-size: cover;
+}
+
+#art-main {
+    background: none !important;
+}

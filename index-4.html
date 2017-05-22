@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from pubsubhubbub.appspot.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 May 2017 19:13:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Google Pubsubhubbub Hub</title>
+  <link rel="stylesheet" href="images/bootstrap-bundle.css" type="text/css">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      
+<h1>Welcome to the Google PubSubHubbub Hub!</h1>
+<p>
+  This hub conforms to the
+  <a href="https://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html">
+  Pubsubhubbub 0.4 specification</a>.
+</p>
+<p>
+  In addition, this hub conforms to the
+  <a href="https://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.3.html">
+  Pubsubhubbub 0.3 specification</a> with the exception of permanent subscriptions. Because
+  of this you will need to refresh each of your subscriptions periodically,
+  ideally just before <code>hub.lease_seconds</code> elapse since the last
+  successful subscription.
+</p>
+
+<h2>Use this hub with your feeds</h2>
+
+<ul>
+  <li>
+    Add an <code>//atom:link</code> tag under <code>//atom:feed</code> for
+    Atom feeds or under <code>//rss:rss/channel</code> for RSS feeds. The
+    <code>//atom:link</code> tag should have <code>rel</code> attribute set to
+    <code>hub</code> and <code>href</code> attribute set to <code>
+    https://pubsubhubbub.appspot.com/</code>
+  </li>
+  <li>
+    Alternatively, your feed can be served with two <code>Link</code> headers:
+    <ul>
+      <li>
+        one with <code>rel</code> attribute set to <code>hub</code> and
+        <code>href</code> attribute set to <code>https://pubsubhubbub.appspot.com/</code>
+      </li>
+      <li>
+        one with <code>rel</code> attribute set to <code>self</code> and
+        <code>href</code> attribute set to the feed URL of the feed
+      </li>
+    </ul>
+  </li>
+  The above is covered in more detail in the
+  <a href="https://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html#discovery">
+  PubsubHubbub 0.4 specification</a>.
+  <li>
+    Whenever new content is added to a feed, notify the hub. This is
+    accomplished by sending a POST request to
+    <code>https://pubsubhubbub.appspot.com/</code> with <code>
+    Content-Type: application/x-www-form-urlencoded</code> and two parameters
+    encoded in the body:
+    <ul>
+      <li><code>hub.mode</code> equal to <code>publish</code></li>
+      <li>
+        <code>hub.url</code> equal to the feed URL of the feed that has been
+        updated. This field may be repeated to indicate multiple feeds that
+        have been updated
+    </ul>
+  </li>
+</ul>
+
+<h2>Hub debug</h2>
+From here you can,
+<ul>
+  <li><a href="https://pubsubhubbub.appspot.com/subscribe">Subscribe</a> to a feed or debug your subscriber</li>
+  <li><a href="https://pubsubhubbub.appspot.com/publish">Publish</a> a feed or debug your published feeds</li>
+</ul>
+
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="span12">
+      <p class="text-center">
+        <small>
+          These legal disclaimers are here because this hub is run by Google as
+          a service. If you don't want to agree to these terms you can use a
+          different hub or even run your own. The PubSubHubbub protocol is
+          decentralized and free.
+        </small>
+      </p>
+      <p class="text-center">
+        <span style="white-space: nowrap;">&copy;2016 Google</span>
+        <span style="white-space: nowrap;"> - </span>
+        <span style="white-space: nowrap;">
+          <a href="http://www.google.com/accounts/TOS" target="_blank">
+            Terms of Service
+          </a>
+        </span>
+        <span style="white-space: nowrap;"> - </span>
+        <span style="white-space: nowrap;">
+          <a href="http://www.google.com/intl/en/privacy.html" target="_blank">
+            Privacy Policy
+          </a>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
